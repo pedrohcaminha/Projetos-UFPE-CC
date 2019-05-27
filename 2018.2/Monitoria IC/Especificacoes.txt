@@ -1,0 +1,9 @@
+Fonte: Malgun Gothic
+Tamanho: 18("Eu sou...") e 10,5(Corpo)
+O espaçamento entre parágrafos deve ser 0,1.
+
+Os "modelos" deverão ser posicionados sobre as áreas demarcadas, como se fosse um albúm de figurinhas.
+As linhas base dos "modelos" deverão guiar a criação das caixas de texto.
+
+IC-2018.2
+

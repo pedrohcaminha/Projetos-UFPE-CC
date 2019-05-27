@@ -1,0 +1,358 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+7
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ULA-DISPLAY-DIAGRAMA
+# storage
+db|SomadorBCD.(0).cnf
+db|SomadorBCD.(0).cnf
+# case_insensitive
+# source_file
+ula-display-diagrama.bdf
+ece52e89f0fb0e73450164efcdf58
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ULA-DIAGRAMA
+# storage
+db|SomadorBCD.(1).cnf
+db|SomadorBCD.(1).cnf
+# case_insensitive
+# source_file
+ula-diagrama.bdf
+e5ed924c0e21c5faad8b53e98a0cfa2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst
+}
+# macro_sequence
+
+# end
+# entity
+COMPLEMENTO4-DIAGRAMA
+# storage
+db|SomadorBCD.(2).cnf
+db|SomadorBCD.(2).cnf
+# case_insensitive
+# source_file
+complemento4-diagrama.bdf
+660e03574db8a126e88304d21883c7f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|COMPLEMENTO4-DIAGRAMA:inst2
+}
+# macro_sequence
+
+# end
+# entity
+COMPLEMENTO1-DIAGRAMA
+# storage
+db|SomadorBCD.(3).cnf
+db|SomadorBCD.(3).cnf
+# case_insensitive
+# source_file
+complemento1-diagrama.bdf
+1d2931d7345713eeeefa11d21737bad4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|COMPLEMENTO4-DIAGRAMA:inst2|COMPLEMENTO1-DIAGRAMA:inst7
+ULA-DIAGRAMA:inst|COMPLEMENTO4-DIAGRAMA:inst2|COMPLEMENTO1-DIAGRAMA:inst6
+ULA-DIAGRAMA:inst|COMPLEMENTO4-DIAGRAMA:inst2|COMPLEMENTO1-DIAGRAMA:inst8
+ULA-DIAGRAMA:inst|COMPLEMENTO4-DIAGRAMA:inst2|COMPLEMENTO1-DIAGRAMA:inst5
+}
+# macro_sequence
+
+# end
+# entity
+SOMA4-DIAGRAMA
+# storage
+db|SomadorBCD.(4).cnf
+db|SomadorBCD.(4).cnf
+# case_insensitive
+# source_file
+soma4-diagrama.bdf
+614afa0eb7d846e37d168c5ca99b32
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|SOMA4-DIAGRAMA:inst1
+}
+# macro_sequence
+
+# end
+# entity
+SOMA1-DIAGRAMA
+# storage
+db|SomadorBCD.(5).cnf
+db|SomadorBCD.(5).cnf
+# case_insensitive
+# source_file
+soma1-diagrama.bdf
+0458cb6be3a534e52bc8c5ed7f6d832
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|SOMA4-DIAGRAMA:inst1|SOMA1-DIAGRAMA:inst2
+ULA-DIAGRAMA:inst|SOMA4-DIAGRAMA:inst1|SOMA1-DIAGRAMA:inst1
+ULA-DIAGRAMA:inst|SOMA4-DIAGRAMA:inst1|SOMA1-DIAGRAMA:inst
+ULA-DIAGRAMA:inst|SOMA4-DIAGRAMA:inst1|SOMA1-DIAGRAMA:inst3
+}
+# macro_sequence
+
+# end
+# entity
+MUX81
+# storage
+db|SomadorBCD.(6).cnf
+db|SomadorBCD.(6).cnf
+# case_insensitive
+# source_file
+mux81.bdf
+b88e9bd5292df7cfdd7e64993f71ea
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|mux81:inst7
+}
+# macro_sequence
+
+# end
+# entity
+IGUAL4-DIAGRAMA
+# storage
+db|SomadorBCD.(7).cnf
+db|SomadorBCD.(7).cnf
+# case_insensitive
+# source_file
+igual4-diagrama.bdf
+f620b0e8852bb52c5dddc5a30e99c4f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|IGUAL4-DIAGRAMA:inst3
+}
+# macro_sequence
+
+# end
+# entity
+IGUAL1-DIAGRAMA
+# storage
+db|SomadorBCD.(8).cnf
+db|SomadorBCD.(8).cnf
+# case_insensitive
+# source_file
+igual1-diagrama.bdf
+a6ed59bb93da5ec8296de563815e2816
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|IGUAL4-DIAGRAMA:inst3|IGUAL1-DIAGRAMA:inst
+ULA-DIAGRAMA:inst|IGUAL4-DIAGRAMA:inst3|IGUAL1-DIAGRAMA:inst1
+ULA-DIAGRAMA:inst|IGUAL4-DIAGRAMA:inst3|IGUAL1-DIAGRAMA:inst2
+ULA-DIAGRAMA:inst|IGUAL4-DIAGRAMA:inst3|IGUAL1-DIAGRAMA:inst3
+}
+# macro_sequence
+
+# end
+# entity
+MAIOR4-DIAGRAMA
+# storage
+db|SomadorBCD.(9).cnf
+db|SomadorBCD.(9).cnf
+# case_insensitive
+# source_file
+maior4-diagrama.bdf
+c11a8cfa03d5c8537d0e6ea60c02b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|MAIOR4-DIAGRAMA:inst4
+}
+# macro_sequence
+
+# end
+# entity
+MAIOR1-DIAGRAMA
+# storage
+db|SomadorBCD.(10).cnf
+db|SomadorBCD.(10).cnf
+# case_insensitive
+# source_file
+maior1-diagrama.bdf
+7bdef6b328fa8eee607a9db19645e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|MAIOR4-DIAGRAMA:inst4|MAIOR1-DIAGRAMA:inst3
+ULA-DIAGRAMA:inst|MAIOR4-DIAGRAMA:inst4|MAIOR1-DIAGRAMA:inst1
+ULA-DIAGRAMA:inst|MAIOR4-DIAGRAMA:inst4|MAIOR1-DIAGRAMA:inst2
+ULA-DIAGRAMA:inst|MAIOR4-DIAGRAMA:inst4|MAIOR1-DIAGRAMA:inst
+}
+# macro_sequence
+
+# end
+# entity
+MENOR4-DIAGRAMA
+# storage
+db|SomadorBCD.(11).cnf
+db|SomadorBCD.(11).cnf
+# case_insensitive
+# source_file
+menor4-diagrama.bdf
+bac99dcb6b59ebede815f39ae051cbb6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|MENOR4-DIAGRAMA:inst
+}
+# macro_sequence
+
+# end
+# entity
+MENOR1-DIAGRAMA
+# storage
+db|SomadorBCD.(12).cnf
+db|SomadorBCD.(12).cnf
+# case_insensitive
+# source_file
+menor1-diagrama.bdf
+3c522b12955d1c3bca199ae4b83f7f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|MENOR4-DIAGRAMA:inst|MENOR1-DIAGRAMA:inst
+ULA-DIAGRAMA:inst|MENOR4-DIAGRAMA:inst|MENOR1-DIAGRAMA:inst1
+ULA-DIAGRAMA:inst|MENOR4-DIAGRAMA:inst|MENOR1-DIAGRAMA:inst3
+ULA-DIAGRAMA:inst|MENOR4-DIAGRAMA:inst|MENOR1-DIAGRAMA:inst4
+}
+# macro_sequence
+
+# end
+# entity
+AND4-DIAGRAMA
+# storage
+db|SomadorBCD.(13).cnf
+db|SomadorBCD.(13).cnf
+# case_insensitive
+# source_file
+and4-diagrama.bdf
+7afc599b5c414a35a06813673767e3e0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|AND4-DIAGRAMA:inst5
+}
+# macro_sequence
+
+# end
+# entity
+XOR4-DIAGRAMA
+# storage
+db|SomadorBCD.(14).cnf
+db|SomadorBCD.(14).cnf
+# case_insensitive
+# source_file
+xor4-diagrama.bdf
+edcbc48149f14b919118af7ee64b1e5
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULA-DIAGRAMA:inst|XOR4-DIAGRAMA:inst6
+}
+# macro_sequence
+
+# end
+# entity
+DISPLAY-DIAGRAMA
+# storage
+db|SomadorBCD.(15).cnf
+db|SomadorBCD.(15).cnf
+# case_insensitive
+# source_file
+display-diagrama.bdf
+2a339e820a16045fe1f196d29ebfd88
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+DISPLAY-DIAGRAMA:inst2
+}
+# macro_sequence
+
+# end
+# complete
+
