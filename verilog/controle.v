@@ -1,6 +1,6 @@
 module controle(sel, auxX, auxY, auxZ, auxULA);
 
-input 3:0] sel;
+input [3:0] sel;
 output reg [1:0] auxX;
 output reg [2:0] auxY;
 output reg [1:0] auxZ;
@@ -22,7 +22,7 @@ parameter SUBULA = 1'b1;
 always begin
 	case(func)
 		4'b0000:
-			begin
+			begin //sequencia de passos
 				auxX <= CARREGARXZ;
 				auxY <= LIMPARY;
 				auxZ <= LIMPARXZ;

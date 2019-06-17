@@ -1,8 +1,8 @@
-module memoria(contagem, valoror, saida;
+module memoria(contagem, valor, saida;
 
 input [3:0] contagem;
-saidaput reg [3:0] saida;
-saidaput reg [3:0] valoror;
+output reg [3:0] saida;
+output reg [3:0] valor;
 
 parameter X = 2;
 parameter Y = 4;
