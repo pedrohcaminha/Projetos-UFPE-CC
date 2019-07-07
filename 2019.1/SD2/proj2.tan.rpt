@@ -1,0 +1,355 @@
+Classic Timing Analyzer report for proj2
+Wed May 29 13:46:16 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. Clock Hold: 'clk'
+  8. tco
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                       ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                        ; To                          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A                                      ; None          ; 11.046 ns                        ; controle:controller|auxZ[0] ; auxZ[0]                     ; clk        ; --       ; 0            ;
+; Clock Setup: 'clk'           ; N/A                                      ; None          ; 102.10 MHz ( period = 9.794 ns ) ; controle:controller|auxY[0] ; Y:regY|saida[2]             ; clk        ; clk      ; 0            ;
+; Clock Hold: 'clk'            ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; memoria:comb_4|saida[2]     ; controle:controller|auxZ[0] ; clk        ; clk      ; 18           ;
+; Total number of failed paths ;                                          ;               ;                                  ;                             ;                             ;            ;          ; 18           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                             ;
++-------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                        ; To                          ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 102.10 MHz ( period = 9.794 ns )               ; controle:controller|auxY[0] ; Y:regY|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 1.435 ns                ;
+; N/A   ; 102.10 MHz ( period = 9.794 ns )               ; controle:controller|auxY[0] ; Y:regY|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 1.435 ns                ;
+; N/A   ; 105.62 MHz ( period = 9.468 ns )               ; controle:controller|auxY[2] ; Y:regY|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 1.273 ns                ;
+; N/A   ; 105.62 MHz ( period = 9.468 ns )               ; controle:controller|auxY[2] ; Y:regY|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 1.273 ns                ;
+; N/A   ; 112.61 MHz ( period = 8.880 ns )               ; controle:controller|auxX[1] ; X:regX|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.982 ns                ;
+; N/A   ; 112.61 MHz ( period = 8.880 ns )               ; controle:controller|auxX[1] ; X:regX|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 0.982 ns                ;
+; N/A   ; 112.84 MHz ( period = 8.862 ns )               ; controle:controller|auxZ[1] ; X:regZ|saida[0]             ; clk        ; clk      ; None                        ; None                      ; 0.986 ns                ;
+; N/A   ; 112.84 MHz ( period = 8.862 ns )               ; controle:controller|auxZ[1] ; X:regZ|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.986 ns                ;
+; N/A   ; 112.84 MHz ( period = 8.862 ns )               ; controle:controller|auxZ[1] ; X:regZ|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 0.986 ns                ;
+; N/A   ; 112.84 MHz ( period = 8.862 ns )               ; controle:controller|auxZ[1] ; X:regZ|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 0.986 ns                ;
+; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; controle:controller|auxY[0] ; Y:regY|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 0.919 ns                ;
+; N/A   ; 118.76 MHz ( period = 8.420 ns )               ; controle:controller|auxY[0] ; Y:regY|saida[0]             ; clk        ; clk      ; None                        ; None                      ; 0.748 ns                ;
+; N/A   ; 120.16 MHz ( period = 8.322 ns )               ; controle:controller|auxX[0] ; X:regX|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.703 ns                ;
+; N/A   ; 120.34 MHz ( period = 8.310 ns )               ; controle:controller|auxX[0] ; X:regX|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 0.697 ns                ;
+; N/A   ; 123.18 MHz ( period = 8.118 ns )               ; controle:controller|auxZ[0] ; X:regZ|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 0.614 ns                ;
+; N/A   ; 123.33 MHz ( period = 8.108 ns )               ; controle:controller|auxZ[0] ; X:regZ|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; 123.37 MHz ( period = 8.106 ns )               ; controle:controller|auxZ[0] ; X:regZ|saida[0]             ; clk        ; clk      ; None                        ; None                      ; 0.608 ns                ;
+; N/A   ; 123.37 MHz ( period = 8.106 ns )               ; controle:controller|auxZ[0] ; X:regZ|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 0.608 ns                ;
+; N/A   ; 127.16 MHz ( period = 7.864 ns )               ; controle:controller|auxY[2] ; Y:regY|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 0.471 ns                ;
+; N/A   ; 127.45 MHz ( period = 7.846 ns )               ; controle:controller|auxY[2] ; Y:regY|saida[0]             ; clk        ; clk      ; None                        ; None                      ; 0.462 ns                ;
+; N/A   ; 315.86 MHz ( period = 3.166 ns )               ; memoria:comb_4|valor[2]     ; X:regX|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 0.783 ns                ;
+; N/A   ; 319.69 MHz ( period = 3.128 ns )               ; memoria:comb_4|valor[1]     ; X:regX|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.749 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; X:regX|saida[2]             ; Y:regY|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 1.480 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[2]             ; Y:regY|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 1.324 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[1]             ; Y:regY|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 1.268 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; X:regX|saida[1]             ; Y:regY|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 1.255 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; X:regX|saida[2]             ; Y:regY|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 1.180 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[0]             ; X:regZ|saida[0]             ; clk        ; clk      ; None                        ; None                      ; 1.183 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[3]             ; Y:regY|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 1.133 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; X:regX|saida[1]             ; Y:regY|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 1.113 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[3]             ; X:regZ|saida[3]             ; clk        ; clk      ; None                        ; None                      ; 1.118 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[1]             ; Y:regY|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 1.089 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[2]             ; X:regZ|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 1.004 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[1]             ; X:regZ|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.983 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; X:regX|saida[1]             ; Y:regY|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.926 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[2]             ; Y:regY|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 0.904 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[1]    ; contador:comb_3|saida[3]    ; clk        ; clk      ; None                        ; None                      ; 0.864 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[0]    ; contador:comb_3|saida[1]    ; clk        ; clk      ; None                        ; None                      ; 1.105 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[1]             ; Y:regY|saida[0]             ; clk        ; clk      ; None                        ; None                      ; 0.775 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[3]             ; Y:regY|saida[2]             ; clk        ; clk      ; None                        ; None                      ; 0.762 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[2]             ; Y:regY|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.668 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[2]    ; contador:comb_3|saida[3]    ; clk        ; clk      ; None                        ; None                      ; 0.660 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[1]    ; contador:comb_3|saida[2]    ; clk        ; clk      ; None                        ; None                      ; 0.650 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[0]    ; memoria:comb_4|saida[0]     ; clk        ; clk      ; None                        ; None                      ; 1.056 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[0]    ; contador:comb_3|saida[2]    ; clk        ; clk      ; None                        ; None                      ; 0.844 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[0]    ; contador:comb_3|saida[3]    ; clk        ; clk      ; None                        ; None                      ; 0.842 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[1]    ; contador:comb_3|saida[1]    ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[2]    ; contador:comb_3|saida[2]    ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[3]    ; contador:comb_3|saida[3]    ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[0]             ; Y:regY|saida[0]             ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Y:regY|saida[1]             ; Y:regY|saida[1]             ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[0]    ; contador:comb_3|saida[0]    ; clk        ; clk      ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[1]    ; memoria:comb_4|saida[1]     ; clk        ; clk      ; None                        ; None                      ; 0.649 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; contador:comb_3|saida[2]    ; memoria:comb_4|saida[2]     ; clk        ; clk      ; None                        ; None                      ; 0.551 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; memoria:comb_4|saida[0]     ; controle:controller|auxY[0] ; clk        ; clk      ; None                        ; None                      ; 1.343 ns                ;
++-------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clk'                                                                                                                                                                                              ;
++------------------------------------------+--------------------------+-----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                     ; To                          ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+--------------------------+-----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[2]  ; controle:controller|auxZ[0] ; clk        ; clk      ; None                       ; None                       ; 0.790 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[1]  ; controle:controller|auxX[1] ; clk        ; clk      ; None                       ; None                       ; 0.882 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[1]  ; controle:controller|auxZ[1] ; clk        ; clk      ; None                       ; None                       ; 0.975 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[1]  ; controle:controller|auxY[2] ; clk        ; clk      ; None                       ; None                       ; 1.106 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[1]  ; controle:controller|auxX[0] ; clk        ; clk      ; None                       ; None                       ; 1.138 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[0]  ; controle:controller|auxZ[1] ; clk        ; clk      ; None                       ; None                       ; 1.188 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[1]  ; controle:controller|auxY[0] ; clk        ; clk      ; None                       ; None                       ; 1.206 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[0]  ; controle:controller|auxY[2] ; clk        ; clk      ; None                       ; None                       ; 1.277 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[2]  ; controle:controller|auxX[0] ; clk        ; clk      ; None                       ; None                       ; 1.289 ns                 ;
+; Not operational: Clock Skew > Data Delay ; memoria:comb_4|saida[0]  ; controle:controller|auxY[0] ; clk        ; clk      ; None                       ; None                       ; 1.343 ns                 ;
+; Not operational: Clock Skew > Data Delay ; contador:comb_3|saida[0] ; memoria:comb_4|valor[1]     ; clk        ; clk      ; None                       ; None                       ; 1.241 ns                 ;
+; Not operational: Clock Skew > Data Delay ; contador:comb_3|saida[1] ; memoria:comb_4|valor[2]     ; clk        ; clk      ; None                       ; None                       ; 1.220 ns                 ;
+; Not operational: Clock Skew > Data Delay ; contador:comb_3|saida[2] ; memoria:comb_4|valor[2]     ; clk        ; clk      ; None                       ; None                       ; 1.274 ns                 ;
+; Not operational: Clock Skew > Data Delay ; contador:comb_3|saida[0] ; memoria:comb_4|valor[2]     ; clk        ; clk      ; None                       ; None                       ; 1.631 ns                 ;
+; Not operational: Clock Skew > Data Delay ; contador:comb_3|saida[1] ; memoria:comb_4|valor[1]     ; clk        ; clk      ; None                       ; None                       ; 1.405 ns                 ;
+; Not operational: Clock Skew > Data Delay ; contador:comb_3|saida[2] ; memoria:comb_4|saida[2]     ; clk        ; clk      ; None                       ; None                       ; 0.551 ns                 ;
+; Not operational: Clock Skew > Data Delay ; contador:comb_3|saida[1] ; memoria:comb_4|saida[1]     ; clk        ; clk      ; None                       ; None                       ; 0.649 ns                 ;
+; Not operational: Clock Skew > Data Delay ; contador:comb_3|saida[0] ; memoria:comb_4|saida[0]     ; clk        ; clk      ; None                       ; None                       ; 1.056 ns                 ;
++------------------------------------------+--------------------------+-----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; tco                                                                                               ;
++-------+--------------+------------+-----------------------------+--------------------+------------+
+; Slack ; Required tco ; Actual tco ; From                        ; To                 ; From Clock ;
++-------+--------------+------------+-----------------------------+--------------------+------------+
+; N/A   ; None         ; 11.046 ns  ; controle:controller|auxZ[0] ; auxZ[0]            ; clk        ;
+; N/A   ; None         ; 9.715 ns   ; controle:controller|auxY[0] ; auxY[0]            ; clk        ;
+; N/A   ; None         ; 9.535 ns   ; controle:controller|auxX[0] ; auxX[0]            ; clk        ;
+; N/A   ; None         ; 8.948 ns   ; controle:controller|auxZ[1] ; auxZ[1]            ; clk        ;
+; N/A   ; None         ; 8.584 ns   ; controle:controller|auxY[2] ; auxY[2]            ; clk        ;
+; N/A   ; None         ; 8.317 ns   ; controle:controller|auxX[1] ; auxX[1]            ; clk        ;
+; N/A   ; None         ; 7.996 ns   ; memoria:comb_4|valor[2]     ; valMemory[2]       ; clk        ;
+; N/A   ; None         ; 7.581 ns   ; memoria:comb_4|valor[1]     ; valMemory[1]       ; clk        ;
+; N/A   ; None         ; 7.448 ns   ; Y:regY|saida[1]             ; saidaY[1]          ; clk        ;
+; N/A   ; None         ; 7.233 ns   ; Y:regY|saida[1]             ; saidaULA[1]        ; clk        ;
+; N/A   ; None         ; 7.127 ns   ; X:regX|saida[1]             ; saidaULA[1]        ; clk        ;
+; N/A   ; None         ; 6.480 ns   ; memoria:comb_4|saida[0]     ; funcsaidaMemory[0] ; clk        ;
+; N/A   ; None         ; 6.353 ns   ; X:regX|saida[2]             ; saidaULA[2]        ; clk        ;
+; N/A   ; None         ; 6.281 ns   ; memoria:comb_4|saida[1]     ; funcsaidaMemory[1] ; clk        ;
+; N/A   ; None         ; 6.202 ns   ; X:regZ|saida[2]             ; saidaZ[2]          ; clk        ;
+; N/A   ; None         ; 6.189 ns   ; memoria:comb_4|saida[2]     ; funcsaidaMemory[2] ; clk        ;
+; N/A   ; None         ; 6.128 ns   ; X:regX|saida[1]             ; saidaULA[2]        ; clk        ;
+; N/A   ; None         ; 5.962 ns   ; Y:regY|saida[1]             ; saidaULA[2]        ; clk        ;
+; N/A   ; None         ; 5.777 ns   ; Y:regY|saida[2]             ; saidaULA[2]        ; clk        ;
+; N/A   ; None         ; 5.754 ns   ; Y:regY|saida[3]             ; saidaY[3]          ; clk        ;
+; N/A   ; None         ; 5.736 ns   ; X:regZ|saida[0]             ; saidaZ[0]          ; clk        ;
+; N/A   ; None         ; 5.733 ns   ; Y:regY|saida[0]             ; saidaY[0]          ; clk        ;
+; N/A   ; None         ; 5.719 ns   ; Y:regY|saida[2]             ; saidaULA[3]        ; clk        ;
+; N/A   ; None         ; 5.666 ns   ; X:regX|saida[1]             ; saidaX[1]          ; clk        ;
+; N/A   ; None         ; 5.663 ns   ; Y:regY|saida[1]             ; saidaULA[3]        ; clk        ;
+; N/A   ; None         ; 5.629 ns   ; Y:regY|saida[2]             ; saidaY[2]          ; clk        ;
+; N/A   ; None         ; 5.619 ns   ; X:regZ|saida[3]             ; saidaZ[3]          ; clk        ;
+; N/A   ; None         ; 5.575 ns   ; X:regX|saida[2]             ; saidaULA[3]        ; clk        ;
+; N/A   ; None         ; 5.528 ns   ; Y:regY|saida[3]             ; saidaULA[3]        ; clk        ;
+; N/A   ; None         ; 5.508 ns   ; X:regX|saida[1]             ; saidaULA[3]        ; clk        ;
+; N/A   ; None         ; 5.480 ns   ; contador:comb_3|saida[2]    ; saidaCounter[2]    ; clk        ;
+; N/A   ; None         ; 5.461 ns   ; Y:regY|saida[0]             ; saidaULA[0]        ; clk        ;
+; N/A   ; None         ; 5.448 ns   ; contador:comb_3|saida[3]    ; saidaCounter[3]    ; clk        ;
+; N/A   ; None         ; 5.343 ns   ; X:regZ|saida[1]             ; saidaZ[1]          ; clk        ;
+; N/A   ; None         ; 5.264 ns   ; contador:comb_3|saida[1]    ; saidaCounter[1]    ; clk        ;
+; N/A   ; None         ; 5.192 ns   ; X:regX|saida[2]             ; saidaX[2]          ; clk        ;
+; N/A   ; None         ; 5.055 ns   ; contador:comb_3|saida[0]    ; saidaCounter[0]    ; clk        ;
++-------+--------------+------------+-----------------------------+--------------------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed May 29 13:46:15 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off proj2 -c proj2 --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "controle:controller|auxX[1]" is a latch
+    Warning: Node "controle:controller|auxX[0]" is a latch
+    Warning: Node "memoria:comb_4|valor[1]" is a latch
+    Warning: Node "memoria:comb_4|saida[1]" is a latch
+    Warning: Node "memoria:comb_4|saida[2]" is a latch
+    Warning: Node "memoria:comb_4|saida[0]" is a latch
+    Warning: Node "memoria:comb_4|valor[2]" is a latch
+    Warning: Node "controle:controller|auxY[0]" is a latch
+    Warning: Node "controle:controller|auxY[2]" is a latch
+    Warning: Node "controle:controller|auxZ[1]" is a latch
+    Warning: Node "controle:controller|auxZ[0]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 9 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "memoria:comb_4|saida[0]" as buffer
+    Info: Detected ripple clock "memoria:comb_4|saida[2]" as buffer
+    Info: Detected ripple clock "memoria:comb_4|saida[1]" as buffer
+    Info: Detected ripple clock "contador:comb_3|saida[3]" as buffer
+    Info: Detected ripple clock "contador:comb_3|saida[2]" as buffer
+    Info: Detected ripple clock "contador:comb_3|saida[0]" as buffer
+    Info: Detected gated clock "controle:controller|Mux6~0" as buffer
+    Info: Detected gated clock "memoria:comb_4|Mux2~0" as buffer
+    Info: Detected ripple clock "contador:comb_3|saida[1]" as buffer
+Info: Clock "clk" has Internal fmax of 102.1 MHz between source register "controle:controller|auxY[0]" and destination register "Y:regY|saida[1]" (period= 9.794 ns)
+    Info: + Longest register to register delay is 1.435 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X1_Y9_N0; Fanout = 6; REG Node = 'controle:controller|auxY[0]'
+        Info: 2: + IC(0.246 ns) + CELL(0.228 ns) = 0.474 ns; Loc. = LCCOMB_X1_Y9_N30; Fanout = 2; COMB Node = 'Y:regY|saida[1]~1'
+        Info: 3: + IC(0.215 ns) + CELL(0.746 ns) = 1.435 ns; Loc. = LCFF_X1_Y9_N29; Fanout = 7; REG Node = 'Y:regY|saida[1]'
+        Info: Total cell delay = 0.974 ns ( 67.87 % )
+        Info: Total interconnect delay = 0.461 ns ( 32.13 % )
+    Info: - Smallest clock skew is -3.372 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.467 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 10; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.652 ns) + CELL(0.618 ns) = 2.467 ns; Loc. = LCFF_X1_Y9_N29; Fanout = 7; REG Node = 'Y:regY|saida[1]'
+            Info: Total cell delay = 1.472 ns ( 59.67 % )
+            Info: Total interconnect delay = 0.995 ns ( 40.33 % )
+        Info: - Longest clock path from clock "clk" to source register is 5.839 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+            Info: 2: + IC(0.577 ns) + CELL(0.712 ns) = 2.143 ns; Loc. = LCFF_X1_Y10_N25; Fanout = 9; REG Node = 'contador:comb_3|saida[0]'
+            Info: 3: + IC(0.609 ns) + CELL(0.346 ns) = 3.098 ns; Loc. = LCCOMB_X1_Y11_N10; Fanout = 4; COMB Node = 'memoria:comb_4|Mux2~0'
+            Info: 4: + IC(0.237 ns) + CELL(0.053 ns) = 3.388 ns; Loc. = LCCOMB_X1_Y11_N14; Fanout = 5; REG Node = 'memoria:comb_4|saida[0]'
+            Info: 5: + IC(0.278 ns) + CELL(0.228 ns) = 3.894 ns; Loc. = LCCOMB_X1_Y11_N2; Fanout = 1; COMB Node = 'controle:controller|Mux6~0'
+            Info: 6: + IC(0.986 ns) + CELL(0.000 ns) = 4.880 ns; Loc. = CLKCTRL_G1; Fanout = 6; COMB Node = 'controle:controller|Mux6~0clkctrl'
+            Info: 7: + IC(0.906 ns) + CELL(0.053 ns) = 5.839 ns; Loc. = LCCOMB_X1_Y9_N0; Fanout = 6; REG Node = 'controle:controller|auxY[0]'
+            Info: Total cell delay = 2.246 ns ( 38.47 % )
+            Info: Total interconnect delay = 3.593 ns ( 61.53 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Warning: Circuit may not operate. Detected 18 non-operational path(s) clocked by clock "clk" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "memoria:comb_4|saida[2]" and destination pin or register "controle:controller|auxZ[0]" for clock "clk" (Hold time is 2.057 ns)
+    Info: + Largest clock skew is 2.847 ns
+        Info: + Longest clock path from clock "clk" to destination register is 5.828 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+            Info: 2: + IC(0.577 ns) + CELL(0.712 ns) = 2.143 ns; Loc. = LCFF_X1_Y10_N25; Fanout = 9; REG Node = 'contador:comb_3|saida[0]'
+            Info: 3: + IC(0.609 ns) + CELL(0.346 ns) = 3.098 ns; Loc. = LCCOMB_X1_Y11_N10; Fanout = 4; COMB Node = 'memoria:comb_4|Mux2~0'
+            Info: 4: + IC(0.237 ns) + CELL(0.053 ns) = 3.388 ns; Loc. = LCCOMB_X1_Y11_N14; Fanout = 5; REG Node = 'memoria:comb_4|saida[0]'
+            Info: 5: + IC(0.278 ns) + CELL(0.228 ns) = 3.894 ns; Loc. = LCCOMB_X1_Y11_N2; Fanout = 1; COMB Node = 'controle:controller|Mux6~0'
+            Info: 6: + IC(0.986 ns) + CELL(0.000 ns) = 4.880 ns; Loc. = CLKCTRL_G1; Fanout = 6; COMB Node = 'controle:controller|Mux6~0clkctrl'
+            Info: 7: + IC(0.895 ns) + CELL(0.053 ns) = 5.828 ns; Loc. = LCCOMB_X1_Y11_N28; Fanout = 5; REG Node = 'controle:controller|auxZ[0]'
+            Info: Total cell delay = 2.246 ns ( 38.54 % )
+            Info: Total interconnect delay = 3.582 ns ( 61.46 % )
+        Info: - Shortest clock path from clock "clk" to source register is 2.981 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+            Info: 2: + IC(0.842 ns) + CELL(0.712 ns) = 2.408 ns; Loc. = LCFF_X1_Y11_N27; Fanout = 8; REG Node = 'contador:comb_3|saida[1]'
+            Info: 3: + IC(0.229 ns) + CELL(0.053 ns) = 2.690 ns; Loc. = LCCOMB_X1_Y11_N10; Fanout = 4; COMB Node = 'memoria:comb_4|Mux2~0'
+            Info: 4: + IC(0.238 ns) + CELL(0.053 ns) = 2.981 ns; Loc. = LCCOMB_X1_Y11_N12; Fanout = 4; REG Node = 'memoria:comb_4|saida[2]'
+            Info: Total cell delay = 1.672 ns ( 56.09 % )
+            Info: Total interconnect delay = 1.309 ns ( 43.91 % )
+    Info: - Micro clock to output delay of source is 0.000 ns
+    Info: - Shortest register to register delay is 0.790 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X1_Y11_N12; Fanout = 4; REG Node = 'memoria:comb_4|saida[2]'
+        Info: 2: + IC(0.562 ns) + CELL(0.228 ns) = 0.790 ns; Loc. = LCCOMB_X1_Y11_N28; Fanout = 5; REG Node = 'controle:controller|auxZ[0]'
+        Info: Total cell delay = 0.228 ns ( 28.86 % )
+        Info: Total interconnect delay = 0.562 ns ( 71.14 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tco from clock "clk" to destination pin "auxZ[0]" through register "controle:controller|auxZ[0]" is 11.046 ns
+    Info: + Longest clock path from clock "clk" to source register is 5.828 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+        Info: 2: + IC(0.577 ns) + CELL(0.712 ns) = 2.143 ns; Loc. = LCFF_X1_Y10_N25; Fanout = 9; REG Node = 'contador:comb_3|saida[0]'
+        Info: 3: + IC(0.609 ns) + CELL(0.346 ns) = 3.098 ns; Loc. = LCCOMB_X1_Y11_N10; Fanout = 4; COMB Node = 'memoria:comb_4|Mux2~0'
+        Info: 4: + IC(0.237 ns) + CELL(0.053 ns) = 3.388 ns; Loc. = LCCOMB_X1_Y11_N14; Fanout = 5; REG Node = 'memoria:comb_4|saida[0]'
+        Info: 5: + IC(0.278 ns) + CELL(0.228 ns) = 3.894 ns; Loc. = LCCOMB_X1_Y11_N2; Fanout = 1; COMB Node = 'controle:controller|Mux6~0'
+        Info: 6: + IC(0.986 ns) + CELL(0.000 ns) = 4.880 ns; Loc. = CLKCTRL_G1; Fanout = 6; COMB Node = 'controle:controller|Mux6~0clkctrl'
+        Info: 7: + IC(0.895 ns) + CELL(0.053 ns) = 5.828 ns; Loc. = LCCOMB_X1_Y11_N28; Fanout = 5; REG Node = 'controle:controller|auxZ[0]'
+        Info: Total cell delay = 2.246 ns ( 38.54 % )
+        Info: Total interconnect delay = 3.582 ns ( 61.46 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 5.218 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X1_Y11_N28; Fanout = 5; REG Node = 'controle:controller|auxZ[0]'
+        Info: 2: + IC(3.074 ns) + CELL(2.144 ns) = 5.218 ns; Loc. = PIN_L3; Fanout = 0; PIN Node = 'auxZ[0]'
+        Info: Total cell delay = 2.144 ns ( 41.09 % )
+        Info: Total interconnect delay = 3.074 ns ( 58.91 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 238 megabytes
+    Info: Processing ended: Wed May 29 13:46:16 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

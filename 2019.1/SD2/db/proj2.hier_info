@@ -1,0 +1,225 @@
+|cpu
+clk => clk~0.IN4
+saidaX[0] <= saidaX[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+saidaX[1] <= saidaX[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+saidaX[2] <= saidaX[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+saidaX[3] <= saidaX[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+saidaY[0] <= saidaY[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+saidaY[1] <= saidaY[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+saidaY[2] <= saidaY[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+saidaY[3] <= saidaY[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+saidaZ[0] <= X:regZ.port3
+saidaZ[1] <= X:regZ.port3
+saidaZ[2] <= X:regZ.port3
+saidaZ[3] <= X:regZ.port3
+saidaULA[0] <= saidaULA[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+saidaULA[1] <= saidaULA[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+saidaULA[2] <= saidaULA[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+saidaULA[3] <= saidaULA[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+auxX[0] <= auxX[0]~1.DB_MAX_OUTPUT_PORT_TYPE
+auxX[1] <= auxX[1]~0.DB_MAX_OUTPUT_PORT_TYPE
+auxY[0] <= auxY[0]~2.DB_MAX_OUTPUT_PORT_TYPE
+auxY[1] <= auxY[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+auxY[2] <= auxY[2]~0.DB_MAX_OUTPUT_PORT_TYPE
+auxZ[0] <= auxZ[0]~1.DB_MAX_OUTPUT_PORT_TYPE
+auxZ[1] <= auxZ[1]~0.DB_MAX_OUTPUT_PORT_TYPE
+auxULA <= auxULA~0.DB_MAX_OUTPUT_PORT_TYPE
+saidaCounter[0] <= saidaCounter[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+saidaCounter[1] <= saidaCounter[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+saidaCounter[2] <= saidaCounter[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+saidaCounter[3] <= saidaCounter[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+valMemory[0] <= valMemory[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+valMemory[1] <= valMemory[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+valMemory[2] <= valMemory[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+valMemory[3] <= valMemory[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+funcsaidaMemory[0] <= funcsaidaMemory[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+funcsaidaMemory[1] <= funcsaidaMemory[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+funcsaidaMemory[2] <= funcsaidaMemory[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+funcsaidaMemory[3] <= funcsaidaMemory[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|contador:comb_3
+clk => saida[0]~reg0.CLK
+clk => saida[1]~reg0.CLK
+clk => saida[2]~reg0.CLK
+clk => saida[3]~reg0.CLK
+saida[0] <= saida[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|memoria:comb_4
+contagem[0] => Mux0.IN19
+contagem[0] => Mux1.IN19
+contagem[0] => Mux2.IN19
+contagem[0] => Mux3.IN19
+contagem[0] => Mux4.IN19
+contagem[0] => Mux5.IN19
+contagem[1] => Mux0.IN18
+contagem[1] => Mux1.IN18
+contagem[1] => Mux2.IN18
+contagem[1] => Mux3.IN18
+contagem[1] => Mux4.IN18
+contagem[1] => Mux5.IN18
+contagem[2] => Mux0.IN17
+contagem[2] => Mux1.IN17
+contagem[2] => Mux2.IN17
+contagem[2] => Mux3.IN17
+contagem[2] => Mux4.IN17
+contagem[2] => Mux5.IN17
+contagem[3] => Mux0.IN16
+contagem[3] => Mux1.IN16
+contagem[3] => Mux2.IN16
+contagem[3] => Mux3.IN16
+contagem[3] => Mux4.IN16
+contagem[3] => Mux5.IN16
+valor[0] <= <GND>
+valor[1] <= valor[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+valor[2] <= valor[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+valor[3] <= <GND>
+saida[0] <= saida[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= <GND>
+
+
+|cpu|controle:controller
+sel[0] => Mux0.IN19
+sel[0] => Mux1.IN19
+sel[0] => Mux2.IN19
+sel[0] => Mux3.IN19
+sel[0] => Mux4.IN19
+sel[0] => Mux5.IN19
+sel[0] => Mux6.IN19
+sel[1] => Mux0.IN18
+sel[1] => Mux1.IN18
+sel[1] => Mux2.IN18
+sel[1] => Mux3.IN18
+sel[1] => Mux4.IN18
+sel[1] => Mux5.IN18
+sel[1] => Mux6.IN18
+sel[2] => Mux0.IN17
+sel[2] => Mux1.IN17
+sel[2] => Mux2.IN17
+sel[2] => Mux3.IN17
+sel[2] => Mux4.IN17
+sel[2] => Mux5.IN17
+sel[2] => Mux6.IN17
+sel[3] => Mux0.IN16
+sel[3] => Mux1.IN16
+sel[3] => Mux2.IN16
+sel[3] => Mux3.IN16
+sel[3] => Mux4.IN16
+sel[3] => Mux5.IN16
+sel[3] => Mux6.IN16
+auxX[0] <= auxX[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+auxX[1] <= auxX[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+auxY[0] <= auxY[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+auxY[1] <= <GND>
+auxY[2] <= auxY[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+auxZ[0] <= auxZ[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+auxZ[1] <= auxZ[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+auxULA <= <GND>
+
+
+|cpu|X:regX
+clk => saida[0]~reg0.CLK
+clk => saida[1]~reg0.CLK
+clk => saida[2]~reg0.CLK
+clk => saida[3]~reg0.CLK
+sel[0] => Mux0.IN2
+sel[0] => Mux1.IN2
+sel[0] => Mux2.IN2
+sel[0] => Mux3.IN2
+sel[1] => Mux0.IN1
+sel[1] => Mux1.IN1
+sel[1] => Mux2.IN1
+sel[1] => Mux3.IN1
+entrada[0] => Mux3.IN3
+entrada[1] => Mux2.IN3
+entrada[2] => Mux1.IN3
+entrada[3] => Mux0.IN3
+saida[0] <= saida[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|Y:regY
+clk => saida[0]~reg0.CLK
+clk => saida[1]~reg0.CLK
+clk => saida[2]~reg0.CLK
+clk => saida[3]~reg0.CLK
+sel[0] => Mux0.IN4
+sel[0] => Mux1.IN3
+sel[0] => Mux2.IN3
+sel[0] => Mux3.IN4
+sel[1] => Mux0.IN3
+sel[1] => Mux1.IN2
+sel[1] => Mux2.IN2
+sel[1] => Mux3.IN3
+sel[2] => Mux0.IN2
+sel[2] => Mux1.IN1
+sel[2] => Mux2.IN1
+sel[2] => Mux3.IN2
+entrada[0] => Mux3.IN5
+entrada[1] => Mux2.IN4
+entrada[2] => Mux1.IN4
+entrada[3] => Mux0.IN5
+saida[0] <= saida[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|X:regZ
+clk => saida[0]~reg0.CLK
+clk => saida[1]~reg0.CLK
+clk => saida[2]~reg0.CLK
+clk => saida[3]~reg0.CLK
+sel[0] => Mux0.IN2
+sel[0] => Mux1.IN2
+sel[0] => Mux2.IN2
+sel[0] => Mux3.IN2
+sel[1] => Mux0.IN1
+sel[1] => Mux1.IN1
+sel[1] => Mux2.IN1
+sel[1] => Mux3.IN1
+entrada[0] => Mux3.IN3
+entrada[1] => Mux2.IN3
+entrada[2] => Mux1.IN3
+entrada[3] => Mux0.IN3
+saida[0] <= saida[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|soma:ula
+sel => saida[0]~0.OUTPUTSELECT
+sel => saida[1]~1.OUTPUTSELECT
+sel => saida[2]~2.OUTPUTSELECT
+sel => saida[3]~3.OUTPUTSELECT
+X[0] => Add0.IN4
+X[0] => Add1.IN8
+X[1] => Add0.IN3
+X[1] => Add1.IN7
+X[2] => Add0.IN2
+X[2] => Add1.IN6
+X[3] => Add0.IN1
+X[3] => Add1.IN5
+Y[0] => Add0.IN8
+Y[0] => Add1.IN4
+Y[1] => Add0.IN7
+Y[1] => Add1.IN3
+Y[2] => Add0.IN6
+Y[2] => Add1.IN2
+Y[3] => Add0.IN5
+Y[3] => Add1.IN1
+saida[0] <= saida[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2]~2.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,11 @@
+Projeto 2 de SD Z = A+B/2
+
+Pedro Caminha
+Luan Silva
+Ramom Santos
+Lucas Tavora
+Douglas Ventura
+
+Os valores a serem somados devem ser carregados no arquivo memoria.v
+ela e a cpu devem ser recompilados
+e no novo waveform vai aparecer o resultado na saida Z
