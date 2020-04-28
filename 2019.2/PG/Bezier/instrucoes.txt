@@ -1,0 +1,3 @@
+Para adicionar um ponto, basta clicar
+Para mover o ponto, basta arrasta-lo
+Para deletar um ponto, basta colocar o mouse sobre ele e apertar a seta para baixo

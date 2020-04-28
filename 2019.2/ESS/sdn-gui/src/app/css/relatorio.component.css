@@ -1,0 +1,25 @@
+th{
+    background-color: #6DD6FC;
+    border-radius: 1px;
+    padding: 15px;
+}
+
+#relatorio th, #relatorio td{
+    margin: 0px 0px 0px 0px;
+    border: 1px solid black;
+}
+
+tr td{
+    padding:15px;
+    text-align: center;
+}
+th button {
+    background-color: transparent;
+    border: 0px solid black;
+    color: black;
+    font-weight: bolder;
+}
+
+th button:hover {
+    cursor: pointer;
+}

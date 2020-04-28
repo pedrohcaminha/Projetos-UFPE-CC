@@ -1,0 +1,39 @@
+<html>
+<h3 id="page-autoavaliacao">Registro de autoavaliacoes</h3>
+<div class="row" *ngIf="matricula != null" (mousemove)="onMove()">
+   <div class="informacao-aluno">
+      <div>{{matricula.aluno.nome}}</div>
+      <div>{{matricula.aluno.cpf}}</div>
+      <div>{{matricula.aluno.email}}</div>
+   </div>
+   <div class="avaliacoes">
+      <table>
+         <tr>
+            <th>Meta</th>
+            <th>Avaliacao do Professor</th>
+            <th>Avaliacao do Aluno</th>
+         </tr>
+         <tr *ngFor="let a of matricula.avaliacoes">
+            <th>{{a.meta}}</th>
+            <th>{{matricula.avaliacoes[matricula.avaliacoes.indexOf(a)].conceito}}</th>
+            <th>
+               <input id="teste-{{a.meta}}" type="text"
+                  [(ngModel)]="matricula.autoAvaliacoes[findIndex(a.meta)].conceito">
+            </th>
+         </tr>
+      </table>
+      <button id="registrar-button" (click)="registrarConceitos()">Registrar</button>
+      <div name="msg-campo-nulo" *ngIf="campoNulo">Nao pode haver campo nulo</div>
+   </div>
+
+   
+</div>
+
+<div id="criar-page-teste">
+   <h5>Form feito apenas para teste</h5>
+      <input name="namebox" type="text" [(ngModel)]="teste_nome">
+      <input name="cpfbox" type="text" [(ngModel)]="teste_cpf">
+      <button (click)="criar()">Criar</button>
+   </div>
+
+</html>

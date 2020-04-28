@@ -1,0 +1,93 @@
+<h3 name="titulo">Turmas</h3>
+<table>
+    <tr><a name="turma1" (click)="showClass1()">ESS 2019-2</a></tr>
+    <tr><a name="turma2" (click)="showClass2()">ESS 2019-1</a></tr>
+</table>
+
+<table *ngIf="showESS20192">
+    <tr>
+        <th>Nome</th>
+        <th name="meta1">Requisitos</th>
+        <th name="meta2">Configuração</th>
+        <th name="meta3">Projetos</th>
+        <th name="meta4">Testes</th>
+        <th name="meta5">Projeto e implementação</th>
+        <th name="meta6">Refatoração</th>
+        <th name="meta7">Trabalho 1</th>
+        <th name="meta8">Trabalho 2</th>
+        <th name="meta9">Trabalho 3</th>
+        <th name="meta10">Trabalho 4</th>
+        <th name="media">Média Parcial</th>
+        <th name="final">Final</th>
+        <th name="mediaFinal">Média Final</th>
+    </tr>
+    <tr>
+        <td name="aluno1">Ewerton</td>
+        <td name="meta1aluno1"><input type="textfield"></td>
+        <td name="meta2aluno1"><input type="textfield"></td>
+        <td name="meta3aluno1"><input type="textfield"></td>
+        <td name="meta4aluno1"><input type="textfield"></td>
+        <td name="meta5aluno1"><input type="textfield"></td>
+        <td name="meta6aluno1"><input type="textfield"></td>
+        <td name="meta7aluno1"><input type="textfield"></td>
+        <td name="meta8aluno1"><input type="textfield"></td>
+        <td name="meta9aluno1"><input type="textfield"></td>
+        <td name="meta10aluno1"><input type="textfield"></td>
+        <td name="mediaPaluno1"></td>
+        <td name="finalaluno1"><input type="textfield"></td>
+        <td name="mediaFinalaluno1">8</td>
+    </tr>
+    <button type="button" (click) = calcularMedia()> Calcular Média </button>
+    
+    <!-- <tr>
+        <td name="aluno2">Paulo</td>
+        <td name="meta1aluno2">MA</td>
+        <td name="meta2aluno2">MA</td>
+        <td name="meta3aluno2">MA</td>
+        <td name="meta4aluno2">MA</td>
+        <td name="meta5aluno2">MA</td>
+        <td name="meta6aluno2">MA</td>
+        <td name="meta7aluno2">MA</td>
+        <td name="finalaluno2"></td>
+        <td name="mediaFinalaluno2">MA</td>
+    </tr> -->
+</table>
+
+<!-- <table *ngIf="showESS20191">
+    <tr>
+        <th>Nome</th>
+        <th name="meta1">Requisitos</th>
+        <th name="meta2">Gerência de configuração e mudanças</th>
+        <th name="meta3">Gerência de projetos</th>
+        <th name="meta4">Arquitetura e linguagens de aplicações de SaaS</th>
+        <th name="meta5">Testes</th>
+        <th name="meta6">Projeto e implementação</th>
+        <th name="meta7">Análise e refatoração de código</th>
+        <th name="final">Final</th>
+        <th name="mediaFinal">Media final</th>
+    </tr>
+    <tr>
+        <td name="aluno1">Ewerton</td>
+        <td name="meta1aluno1">MA</td>
+        <td name="meta2aluno1">MA</td>
+        <td name="meta3aluno1">MA</td>
+        <td name="meta4aluno1">MA</td>
+        <td name="meta5aluno1">MA</td>
+        <td name="meta6aluno1">MANA</td>
+        <td name="meta7aluno1">MANA</td>
+        <td name="finalaluno1">MANA</td>
+        <td name="mediaFinalaluno1">MANA</td>
+    </tr>
+    <tr>
+        <td name="aluno2">Paulo</td>
+        <td name="meta1aluno2">MA</td>
+        <td name="meta2aluno2">MA</td>
+        <td name="meta3aluno2">MA</td>
+        <td name="meta4aluno2">MA</td>
+        <td name="meta5aluno2">MA</td>
+        <td name="meta6aluno2">MA</td>
+        <td name="meta7aluno2">MA</td>
+        <td name="finalaluno2"></td>
+        <td name="mediaFinalaluno2">MA</td>
+    </tr>
+</table> -->

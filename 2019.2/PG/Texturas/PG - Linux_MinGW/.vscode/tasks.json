@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile",
+            "type": "process",
+            "command": "g++",
+            "windows": {
+                "args": ["-ISDL2", "-Llib", "main.cpp","lodepng.cpp" , "ImGUI/imgui_draw.cpp", "ImGUI/imgui_sdl.cpp", "ImGUI/imgui_widgets.cpp", "ImGUI/imgui.cpp", "-g", "-O3", "-w", "-lmingw32", "-lSDL2main", "-lSDL2", "-o", "Renderer.exe"],
+            },
+            "linux":{
+                "args": ["main.cpp", "ImGUI/imgui_draw.cpp","lodepng.cpp" ,"ImGUI/imgui_sdl.cpp", "ImGUI/imgui_widgets.cpp", "ImGUI/imgui.cpp" , "-g", "-O3", "-w", "-lSDL2main", "-lSDL2", "-o", "Renderer.exe"],
+            },
+        },
+    ],
+    
+}

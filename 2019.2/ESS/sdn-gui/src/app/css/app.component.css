@@ -1,0 +1,22 @@
+body {
+  font-family: 'Roboto','Courier New', Courier, monospace;
+}
+nav a {
+padding-right: 15px;
+}
+
+table td{
+padding: 15px;
+text-align: center;
+}
+
+th {
+background-color: #6DD6FC;
+border-radius: 1px;
+padding: 15px;
+}
+
+td input {
+  width: 38%;
+  text-align: center;
+}

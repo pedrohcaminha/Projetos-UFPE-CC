@@ -1,0 +1,17 @@
+<html id="login-page" (mousemove)="onMove()">
+<h2>Selecao</h2>
+
+CPF:
+<input name="cpf-login" [(ngModel)]="cpf" type="text">
+<button id="sign-in" (click)="signIn()">Sign in</button>
+<div *ngIf="cpfNaoExiste" name="msg-login-mal-sucedido">Não existe matricula com esse CPF</div>
+
+
+<div style="top: 1000px;" id="criar-autoavaliacao-teste">
+    <h5>Form feito apenas para teste</h5>
+    <input name="namebox" type="text" [(ngModel)]="teste_nome">
+    <input name="cpfbox" type="text" [(ngModel)]="teste_cpf">
+    <button (click)="criar()">Criar</button>
+</div>
+
+</html>

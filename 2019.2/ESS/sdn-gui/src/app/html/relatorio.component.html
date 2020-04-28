@@ -1,0 +1,42 @@
+<h3 name='titulo'>Relatório</h3>
+<p name="mensagemErro" class="alert alert-error" *ngIf="resultado_relatorio.erro">{{resultado_relatorio.erro}}</p>
+<table id="relatorio" *ngIf="!resultado_relatorio.erro">
+    <tr>
+        <th>Situação</th>
+        <th>Quantidade</th>
+        <th>Porcentagem</th>
+    </tr>
+    <tr>
+        <th name="descricaoAprovadosMedia">Aprovados por média</th>
+        <td name="quantidadeAprovadosMedia">{{resultado_relatorio.aprovadosMedia}}</td>
+        <td name="porcentagemAprovadosMedia">
+            {{(resultado_relatorio.aprovadosMedia*100/resultado_relatorio.totalAlunos).toFixed(2)}}%</td>
+    </tr>
+    <tr>
+        <th name="descricaoFinal">Final</th>
+        <td name="quantidadeFinal">{{resultado_relatorio.final}}</td>
+        <td name="porcentagemFinal">{{(resultado_relatorio.final*100/resultado_relatorio.totalAlunos).toFixed(2)}}%</td>
+    </tr>
+    <tr>
+        <th name="descricaoReprovacaoFalta">Reprovados por falta</th>
+        <td name="quantidadeReprovacaoFalta">{{resultado_relatorio.reprovadosFalta}}</td>
+        <td name="porcentagemReprovacaoFalta">
+            {{(resultado_relatorio.reprovadosFalta*100/resultado_relatorio.totalAlunos).toFixed(2)}}%</td>
+    </tr>
+    <tr>
+        <th name="descricaoReprovacaoNota">reprovados por nota</th>
+        <td name="quantidadeReprovacaoNota">{{resultado_relatorio.reprovadosNota}}</td>
+        <td name="porcentagemReprovacaoNota">
+            {{(resultado_relatorio.reprovadosNota*100/resultado_relatorio.totalAlunos).toFixed(2)}}%</td>
+    </tr>
+    <tr>
+        <th name="descricaoAprovados">Aprovados</th>
+        <td name="quantidadeAprovados">{{resultado_relatorio.aprovados}}</td>
+        <td name="porcentagemAprovados">
+            {{(resultado_relatorio.aprovados*100/resultado_relatorio.totalAlunos).toFixed(2)}}%</td>
+    </tr>
+    <tr>
+        <th name="descricaoTotalAlunos">Total de alunos</th>
+        <td name="quantidadeTotalAlunos">{{resultado_relatorio.totalAlunos}}</td>
+    </tr>
+</table>

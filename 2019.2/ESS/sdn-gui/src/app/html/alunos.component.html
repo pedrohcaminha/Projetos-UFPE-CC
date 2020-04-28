@@ -1,0 +1,32 @@
+<html>
+
+<div>
+    <h2>Alunos</h2>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>E-mail</th>
+            <th>Github</th>
+        </tr>
+
+        <tr>
+            <td><input [(ngModel)]="aluno.nome"></td>
+            <td><input [(ngModel)]="aluno.cpf"></td>
+            <td><input [(ngModel)]="aluno.email"></td>
+            <td><input [(ngModel)]="aluno.github"></td>
+            <td><button (click)="cadastrarAluno(aluno)">CADASTRAR</button></td>
+        </tr>
+        <tr *ngFor="let a of alunos" name="alunolist">
+            <td name="nomelist">{{a.nome}}</td>
+            <td name="cpflist">{{a.cpf}}</td>
+            <td name="emaillist">{{a.email}}</td>
+            <td name="githublist">{{a.github}}</td>
+        </tr>
+    </table>
+</div>
+
+</html>
